@@ -1,0 +1,153 @@
+body{
+    padding: 0;
+    margin: 0;
+    width:100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/*ヘッダー*/
+.header-background{
+    padding-top:7rem;
+    background:url("Image/Header-Image.jpeg");
+    background-size: cover;
+    padding-left: 1em;
+}
+#header-title{
+    font-size:30mm;
+    -webkit-text-stroke:2px white;
+    color:transparent;
+    animation: header-title-ani 1s ease forwards;
+
+}
+
+#header-sub-title{
+    text-shadow:0 0 25px rgba(255,255,255,.1);
+    -webkit-text-stroke:0.3mm white;
+    font-size:10mm;
+    color:black;
+    position: relative;
+    top:-17mm;
+    animation: header-sub-title-ani 2s ease forwards;
+    padding-top:1em;
+}
+
+/*Menu*/
+.menu-button{
+    content:"";
+    background: #131313;
+    position: absolute;
+    top:-7rem;
+    left:-7rem;
+    height:14rem;
+    width:14rem;
+    transform:rotateZ(135deg);
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.menu-button:hover{
+    transition: 0.5s;
+    top:-8rem;
+    left:-8rem;
+    height:14rem;
+}
+
+
+.menu-button-in{
+    text-align: center;
+    position: absolute;
+    top:1.5rem;
+    right:0;
+    height:auto;
+    width:100%;
+    color:white;
+    transform:rotateZ(-135deg);
+}
+.menu-background{
+    position: fixed;
+    width:30rem;
+    height:120vh;
+    background: #131313;
+    top:-10%;
+    left:-15rem;
+    transform: rotateZ(10deg);
+    flex-wrap: wrap;
+}
+.menu-container{
+    position: absolute;
+    text-align: right;
+    padding-top:10vh;
+    right:0;
+    top:0;
+    height:100%;
+    width:100%;
+}
+.menu-container .menu{
+    width:auto;
+    text-align: right;
+    padding-right: 1em;
+    font-size:2em;
+    line-height: 4em;
+    height:auto;
+    color:white;
+    transition: 0.5s;
+
+}
+
+.menu-container .menu:hover{
+    width:auto;
+    text-align: right;
+    padding-right: 2em;
+    padding-right: 2em;
+    background: rgba(255,255,255,.5);
+    font-size:2em;
+    line-height: 4em;
+    height:auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+/*コンテンツ*/
+.content{
+    padding:1em;
+    max-width:400mm;
+    width:90vw;
+    background:red;
+    margin:1em auto;
+}
+
+/*animation*/
+
+@keyframes header-title-ani {
+    0%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    50%{
+
+    }
+    100%{
+        transform: scale(1,1) rotateY(0);
+        opacity: 1;
+    }
+}
+@keyframes header-sub-title-ani {
+    0%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    100%{
+        transform: scale(1,1) rotateY(0);
+        opacity: 1;
+    }
+
+}
+

@@ -1,0 +1,400 @@
+body{
+    padding: 0;
+    margin: 0;
+    height:100vh;
+    width:100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.iphone body{
+    font-size: 25px;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+/*コンテナ*/
+.container{
+    overflow-y: scroll;
+    position: relative;
+    height:100vh;
+    width:100%;
+    scroll-snap-type: y mandatory;
+}
+.section{
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    width:100%;
+    height:100vh;
+    text-align: center;
+    background:#131313;
+    box-shadow: -10px 0 10px 10px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+.container .section #header-title{
+    font-size:50mm;
+    /*text-shadow:0 0 10px white;*/
+    -webkit-text-stroke:2px white;
+    color:transparent;
+    animation: header-title-ani 1s ease forwards;
+    padding-top: calc(50vh - 2ch);
+}
+.container .section #header-sub-title{
+    text-shadow:0 0 25px rgba(255,255,255,.1);
+    -webkit-text-stroke:0.3mm white;
+    font-size:10mm;
+    color:black;
+    position: relative;
+    top:-17mm;
+    animation: header-sub-title-ani 2s ease forwards;
+}
+.container .section:nth-child(1){
+    text-align: center;
+    background: linear-gradient(35deg, #00ffbd, #ff00df);
+    background-size: 400% 400%;
+    -webkit-animation: back-1 5s ease infinite;
+    -moz-animation: back-1 2s ease infinite;
+    animation: back-1 10s ease infinite;
+}
+.container .section:nth-child(2){
+    text-align: center;
+    background-size: 400% 400%;
+}
+.container .section:nth-child(3){
+    text-align: center;
+    background-size: cover;
+    background: url("img/Pa.png") rgba(19,19,19,1) no-repeat center;
+}
+
+.container .section:nth-child(3) .text{
+    position: relative;
+    width:34em;
+    top:15vh;
+    line-height: 2em;
+    background:rgba(19,19,19,0.8);
+    border-radius: 0 0 0 6px;
+}
+
+.container .section:nth-child(4){
+    text-align: center;
+    background-size: cover;
+    background: url("img/ATD.png") rgba(19,19,19,1) no-repeat center;
+}
+.container .section:nth-child(4) .text{
+    position: relative;
+    width:34em;
+    top:15vh;
+    line-height: 2em;
+    background: rgba(27, 27, 45,.5);
+    border-radius: 0 0 0 6px;
+}
+.container .section:nth-child(5){
+    text-align: center;
+    color:white;
+}
+.container .section:nth-child(5) .button{
+    width:40em;
+    margin:auto;
+}
+.container .section:nth-child(6){
+    color:white;
+}
+/*カード*/
+.card-container{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    background:white;
+    box-shadow: 0 4px 4px 0 black;
+    text-align: center;
+    margin:5% 1em;
+    padding: 1em 1em;
+    color:black;
+}
+/*アプリタイル*/
+.section .app-tile{
+    height: calc(100vh / 3);
+    width:100%;
+    background:white;
+    box-shadow: 0 -5mm 5mm 0 rgba(0,0,0,.5) inset;
+    transition: 0.2s;
+    opacity: .6;
+}
+.section .app-tile:Hover{
+    height: calc((100vh / 3) + 30mm);
+    transition: 0.2s;
+    cursor: pointer;
+    opacity: 1;
+}
+.section .app-tile .img{
+    transform: scale(1.0);
+    transition: 0.5s;
+    padding:10px;
+    color:white;
+    font-size: 2rem;
+}
+.section .app-tile:hover .img{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.section .app-tile a{
+    position: absolute;
+
+    z-index: 2;
+}
+.section .app-tile:nth-child(1){
+    background:url("img/dungeonsBackground.png") center;
+    background-size:cover;
+}
+.section .app-tile:nth-child(2){
+    background:url("img/ATD.png") center;
+    background-size:cover;
+}
+.section .app-tile:nth-child(3){
+    background-size:cover;
+    background: linear-gradient(35deg, #00ffbd, #ff00df);
+    background-size: 400% 400%;
+    -webkit-animation: back-1 5s ease infinite;
+    -moz-animation: back-1 2s ease infinite;
+    animation: back-1 10s ease infinite;
+}
+/*装飾*/
+.title{
+    background: white;
+    color:black;
+    text-align: center;
+
+}
+.icon{
+    border-radius: 100%;
+    padding-right:2mm ;
+}
+.link{
+    transform:scale(1);
+    padding-top:5mm;
+    height:20mm;
+    transition: 0.5s;
+    width:100%;
+}
+.link:Hover{
+    transform:scaleY(1.1);
+    transition: 0.5s;
+    background: rgba(255,255,255,0.2);
+}
+img .icon{
+    height:5%;
+    width:auto;
+    margin:0;
+}
+.text{
+    text-align: left;
+    color:white;
+    position:unset;
+    width:25em;
+    padding-left:25px;
+    margin:auto;
+    border-left:6px white solid;
+}
+.button{
+    border-radius: 65px;
+    width:auto;
+    height:3em;
+    text-align: center;
+    line-height: 3em;
+    background: whitesmoke;
+    transition: .5s;
+    color:black;
+}
+.button:hover{
+    transition: .5s;
+    box-shadow:0 1px 3px 3px rgba(0,0,0,.6) inset;
+}
+/*メニュー*/
+.iphone .menu-button{
+    top:-15rem;
+    left:-15rem;
+    height:30rem;
+    width:30rem;
+}
+.menu-button{
+    content:"";
+    background: #131313;
+    position: absolute;
+    top:-7rem;
+    left:-7rem;
+    height:14rem;
+    width:14rem;
+    transform:rotateZ(135deg);
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.menu-button:hover{
+    transition: 0.5s;
+    top:-8rem;
+    left:-8rem;
+    height:14rem;
+}
+.iphone .menu-button-in{
+    text-align: center;
+    position: absolute;
+    top:4.5rem;
+    right:0;
+    height:auto;
+    width:100%;
+    color:white;
+    transform:rotateZ(-135deg);
+}
+.menu-button-in{
+    text-align: center;
+    position: absolute;
+    top:1.5rem;
+    right:0;
+    height:auto;
+    width:100%;
+    color:white;
+    transform:rotateZ(-135deg);
+}
+.menu-background{
+    position: fixed;
+    width:30rem;
+    height:120vh;
+    background: #131313;
+    top:-10%;
+    left:-15rem;
+    transform: rotateZ(10deg);
+    flex-wrap: wrap;
+    /*
+    top:0;
+    left:0;
+    transform: rotateZ(0)
+    scale(0.5);*/
+}
+.menu-container{
+    position: absolute;
+    text-align: right;
+    padding-top:10vh;
+    right:0;
+    top:0;
+    height:100%;
+    width:100%;
+}
+.menu-container .menu{
+    width:auto;
+    text-align: right;
+    padding-right: 1em;
+    font-size:2em;
+    line-height: 4em;
+    height:auto;
+    color:white;
+    transition: 0.5s;
+
+}/*
+.iphone .menu-container a:nth-child(odd) .menu{
+    background: #090909;
+}
+.iphone .menu-container a:nth-child(odd) .menu:hover{
+    background: rgba(255,255,255,.5);
+}*/
+.menu-container .menu:hover{
+    width:auto;
+    text-align: right;
+    padding-right: 2em;
+    padding-right: 2em;
+    background: rgba(255,255,255,.5);
+    font-size:2em;
+    line-height: 4em;
+    height:auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.iphone .menu-container a:nth-child(odd) .menu{
+    background: #090909;
+}
+/*
+.menu{
+    position: fixed;
+    bottom:15px;
+    left:15px;
+    height:4em;
+    width:4em;
+    background:linear-gradient(35deg,#00ffbd,#ff00df);
+    border-radius: 100%;
+    box-shadow: 0.5mm 0.5mm 1mm 0 rgba(0,0,0,.3);
+    text-align: center;
+    line-height: 4.5em;
+    color:white;
+    transition: 0.2s;
+}
+
+.menu:hover{
+transform: scale(1.4);
+    cursor: pointer;
+    transition: 0.5s;
+}*/
+/*
+.menu-container{
+    position: fixed;
+    display:flex;
+    height:auto;
+    width:calc(4em + 2mm);
+    bottom:calc(15px + 4em);
+    left:15px;
+    flex-wrap: wrap;
+}
+.menu-container .menu{
+    top:0;
+    left:0;
+    position:relative;
+    margin:2mm;
+    margin-left:0;
+}
+*/
+/*アニメーション*/
+@-webkit-keyframes back-1 {
+    0%{background-position:14% 0}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0}
+}
+@-moz-keyframes back-1 {
+    0%{background-position:14% 0}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0}
+}
+@keyframes back-1 {
+    0%{background-position:14% 0}
+    50%{background-position:87% 100%}
+    100%{background-position:14% 0}
+}
+
+@keyframes header-title-ani {
+    0%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    50%{
+
+    }
+    100%{
+        transform: scale(1,1) rotateY(0);
+        opacity: 1;
+    }
+}
+@keyframes header-sub-title-ani {
+    0%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0.8,0.8) rotateY(35deg);
+    }
+    100%{
+        transform: scale(1,1) rotateY(0);
+        opacity: 1;
+    }
+
+}
