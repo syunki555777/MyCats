@@ -1,6 +1,7 @@
 
 function onLoad() {
-
+    //Eventをすべてリセット(下記に記述している以外を消す。)
+    $("*").off();
     var loc = location.href;
     history.replaceState({"pageURL": loc}, null, loc);
     console.log(loc);
@@ -102,8 +103,6 @@ function URLLoadContainer(URL,name){
                 container.animate({
                     opacity:1
                 },500);
-
-                $("*").off();
 
                 onLoad();
             },
