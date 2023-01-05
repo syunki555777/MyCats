@@ -28,22 +28,22 @@ function onLoad() {
 
 
     $(".member-button").on("click", function () {
-        URLLoadContainer("/member.html", "メンバー");
+        URLLoadContainer("member.html", "メンバー");
         stateUpdate("member.html");
     });
 
     $(".story-button").on("click", function () {
-        URLLoadContainer("/story.html", "ストーリー");
+        URLLoadContainer("story.html", "ストーリー");
         stateUpdate("story.html");
     });
 
     $(".about-button").on("click", function () {
-        URLLoadContainer("/about.html", "アバウト");
+        URLLoadContainer("about.html", "アバウト");
         stateUpdate("about.html");
     });
 
     $(".photo-button").on("click", function () {
-        URLLoadContainer("/photo.html", "写真");
+        URLLoadContainer("photo.html", "写真");
         stateUpdate("photo.html");
     });
 
