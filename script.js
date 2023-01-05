@@ -2,9 +2,18 @@
 function onLoad() {
     //Eventをすべてリセット(下記に記述している以外を消す。)
     $("*").off();
-    var loc = location.href;
-    history.replaceState({"pageURL": loc}, null, loc);
-    console.log(loc);
+
+    if(location.pathname.substring(-2) === "s"){
+        console.log(location + "/");
+        var loc = location.href + "/";
+        history.replaceState({"pageURL": loc}, null, loc);
+        console.log(loc);
+    }else{
+        var loc = location.href;
+        history.replaceState({"pageURL": loc}, null, loc);
+        console.log(loc);
+
+    }
 
     $(".photo-view").hide();
 
